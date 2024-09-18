@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "this is a project to practice development",
   "author": "Kitty Kat",
-  "license": "MIT"
-
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  }
 }
