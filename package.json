@@ -5,6 +5,6 @@
   "author": "Kitty Kat",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": ""
   }
 }
