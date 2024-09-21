@@ -17,7 +17,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-       	node-version: '16'  # Use a specific version
+        node-version: '16'
 	
     - name: Container Images Sync
       uses: x-actions/python3-cisctl@v1
@@ -43,3 +43,4 @@ jobs:
       
     - name: Print deploying message
       run: echo "Deploying..."
+
