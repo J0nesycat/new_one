@@ -24,7 +24,7 @@ jobs:
       env:
         GIT_ORG: "x-mirrors"
         GIT_REPO: "gcr.io"
-        GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Check if the secret is defined in your repo
         SRC_IMAGE_LIST_URL: "https://raw.githubusercontent.com/x-mirrors/gcr.io/main/registry.k8s.io/all-repos.txt"
         DEST_REPO: "docker.io/gcmirrors"
         SRC_TRANSPORT: "docker"
