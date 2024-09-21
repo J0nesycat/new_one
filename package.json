@@ -9,8 +9,7 @@
   },
   "author": "Your Name",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"  // Add your dependencies here
-  }
+  
+  
 }
 
