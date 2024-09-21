@@ -14,23 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    
-	
-    - name: Container Images Sync
-      uses: x-actions/python3-cisctl@v1
-      env:
-        GIT_ORG: "x-mirrors"
-        GIT_REPO: "gcr.io"
-        
-        SRC_IMAGE_LIST_URL: "https://raw.githubusercontent.com/x-mirrors/gcr.io/main/registry.k8s.io/all-repos.txt"
-        DEST_REPO: "docker.io/gcmirrors"
-        SRC_TRANSPORT: "docker"
-        DEST_TRANSPORT: "docker"
-        DEST_TRANSPORT_USER: "user"
-        DEST_TRANSPORT_PASSWORD: "password"
-        THREAD_POOL_NUM: 2
-        AFTER_TIMEUPLOADEDMS: 0
-        LOG_LEVEL: "DEBUG"
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+         node-version: '16'
         
     - name: Install dependencies
       run: npm install
