@@ -42,23 +42,7 @@ jobs:
         push: true
         tags: jonesycat/my_first_repository:latest  # Replace with your Docker Hub username/repo
         
- # AWS        
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
-        aws-region: us-east-1
 
-    - name: Log in to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v2
-
-    - name: Build and push Docker image
-      run: |
-        docker build -t my-image:latest .
-        docker tag my-image:latest ${{ steps.login-ecr.outputs.registry }}/my-image:latest
-        docker push ${{ steps.login-ecr.outputs.registry }}/my-image:latest
 #message
     - name: Print deploying message
       run: echo "Deploying..."
